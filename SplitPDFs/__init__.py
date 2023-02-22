@@ -62,7 +62,7 @@ def main(myblob: func.InputStream):
             with open(temp_pdf_fp, "wb") as outputStream:
                 output.write(outputStream)
 
-            with open(temp_pdf_fp, 'rb') as temp_pdf_file:
+            with open(temp_pdf_fp, 'rb') as f:
                 poller = document_analysis_client.begin_analyze_document(
                 "prebuilt-read", document=f
             )
